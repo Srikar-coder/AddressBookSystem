@@ -20,4 +20,13 @@ public class AddressBookService {
         } else
             addData(addressBookDTO);
     }
+    * UC-4 */
+    // Delete a person details using person's name
+    public void deleteRecord(AddressBookDTO addressBookDTO) {
+        if(DataBase.dtoMap.containsKey(addressBookDTO.getFirstName())){
+            DataBase.dtoMap.remove(addressBookDTO.getFirstName());
+            System.out.println(DataBase.dtoMap.size());
+        } else
+            System.out.println("No such Data Found!!");
+    }
 }
