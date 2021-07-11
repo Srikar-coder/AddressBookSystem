@@ -34,4 +34,9 @@ public class Main {
             input = sc.nextLine();
         }
     }
+    * UC-3 */
+    // To update the records of address book
+    private static void updateRecords() {
+        addressBookService.updateAddressBook(UserInput.userInputFromConsole());
+    }
 }
